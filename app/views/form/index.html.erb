@@ -1,49 +1,48 @@
 <h1>Form#index</h1>
 <p>Find me in app/views/form/index.html.erb</p>
 
-<%= form_with url: "/score/index", method: :get do |form| %>
-<div class = "formContainer">
-<div>
- <%= form.label :subject1, "Subject1:" %>
-  <%= form.text_field :subject1 %>
-  <%= form.label :mark1,"mark1:" %>
-  <%= form.text_field :mark1 %>
-</div>
-<div>
- <%= form.label :subject2, "Subject2:" %>
-  <%= form.text_field :subject2 %>
-  <%= form.label :mark2,"mark2:" %>
-  <%= form.text_field :mark2 %>
-</div>
 
-<div>
- <%= form.label :subject3, "Subject3:" %>
-  <%= form.text_field :subject3 %>
-  <%= form.label :mark3,"mark3:" %>
-  <%= form.text_field :mark3 %>
-</div>
+<%= form_with url: "/main/test?number_of_choices=#{@number_of_choices.to_i}", method: :get do |form| %>
+  <div class = "formContainer">
+    Number of rows = <%= @number_of_choices %>
+    <%= form.hidden_field :number_of_choices, value: @number_of_choices %>
+    <% for i in 1..@number_of_choices.to_i  %>
+     <div>
+      row = <%= i %>
+     </div>
+   
+    <div>
+      <%= form.label :subjecti, "subject_name"  %>
+      <%= form.text_field "subject_#{i}",:value => params["subject_#{i}"]%>
+      <%= form.label :mark1,"subject_mark" %>
+      <%= form.number_field "mark_#{i}" ,:value => params["mark_#{i}"]%>
+      <% if params["subject_#{i}"] == "" %>
+        <div>Subject name is required</div>
+      <% end %>
+      <% if params["mark_#{i}"] == "" %>
+        <div>Score is required</div>
+      <% end %>
+    </div>
+    <%end%>
 
-<button class = "submitButton" Type="submit">
-    Submit
-</button>
-  
-</div>
-
+    <button class = "submitButton" Type="submit">
+      Submit
+    </button>
+  </div>
 <% end %>
-
 <style>
-    .formContainer{
-       display:flex;
-       justify-content:start;
-       flex-direction:column;
-       align-items:center;
-       row-gap:2rem;
-    }
-    .submitButton{
-        width:100px;
-        font-size:18px;
-        padding:0.5rem 0rem;
-        font-weight:bold;
-        text-align:center
-    }
+  .formContainer{
+     display:flex;
+     justify-content:start;
+     flex-direction:column;
+     align-items:center;
+     row-gap:2rem;
+  }
+  .submitButton{
+      width:100px;
+      font-size:18px;
+      padding:0.5rem 0rem;
+      font-weight:bold;
+      text-align:center
+  }
 </style>
