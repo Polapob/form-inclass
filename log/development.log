@@ -9433,3 +9433,111 @@ Processing by FormController#index as HTML
 Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 14104)
 
 
+Started GET "/" for 127.0.0.1 at 2022-09-12 22:25:12 +0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1853)
+  Rendered layout layouts/application.html.erb (Duration: 153.0ms | Allocations: 36267)
+Completed 200 OK in 168ms (Views: 159.4ms | ActiveRecord: 0.0ms | Allocations: 39704)
+
+
+Started GET "/main/test?is_first_time=true&number_of_choices=1" for 127.0.0.1 at 2022-09-12 22:25:14 +0700
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 3345)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 5945)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 6415)
+
+
+Started GET "/main/test?number_of_choices=1&subject_1=&mark_1=" for 127.0.0.1 at 2022-09-12 22:25:27 +0700
+Processing by FormController#index as HTML
+  Parameters: {"number_of_choices"=>"1", "subject_1"=>"", "mark_1"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 2537)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 4942)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 5311)
+
+
+Started GET "/main/test?number_of_choices=1&subject_1=dasd&mark_1=3123" for 127.0.0.1 at 2022-09-12 22:25:35 +0700
+Processing by FormController#index as HTML
+  Parameters: {"number_of_choices"=>"1", "subject_1"=>"dasd", "mark_1"=>"3123"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."subject" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["subject", "dasd"], ["LIMIT", 1]]
+  ↳ app/controllers/form_controller.rb:34:in `block in index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO "students" ("subject", "points", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["subject", "dasd"], ["points", 3123.0], ["created_at", "2022-09-12 15:25:35.954998"], ["updated_at", "2022-09-12 15:25:35.954998"]]
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+Redirected to http://localhost:3000/score/index?sumScore=3123&maxScoreSubject=dasd
+Completed 302 Found in 23ms (ActiveRecord: 2.8ms | Allocations: 9776)
+
+
+Started GET "/score/index?sumScore=3123&maxScoreSubject=dasd" for 127.0.0.1 at 2022-09-12 22:25:35 +0700
+Processing by ScoreController#index as HTML
+  Parameters: {"sumScore"=>"3123", "maxScoreSubject"=>"dasd"}
+  Rendering layout layouts/application.html.erb
+  Rendering score/index.html.erb within layouts/application
+  Rendered score/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2983)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 3782)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:25:37 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 8.9ms | Allocations: 19425)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 22100)
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 0.2ms | Allocations: 23937)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-12 22:25:42 +0700
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1028)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3446)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 3733)
+
+
+Started GET "/main/test?is_first_time=true&number_of_choices=1" for 127.0.0.1 at 2022-09-12 22:25:44 +0700
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 2525)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 4919)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 5216)
+
+
+Started GET "/main/test?is_first_time=true&number_of_choices=1" for 127.0.0.1 at 2022-09-12 22:26:07 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 33.5ms | Allocations: 3859)
+  Rendered layout layouts/application.html.erb (Duration: 133.6ms | Allocations: 38238)
+Completed 200 OK in 147ms (Views: 139.8ms | ActiveRecord: 0.0ms | Allocations: 41725)
+
+
+Started GET "/main/test?is_first_time=true&number_of_choices=1" for 127.0.0.1 at 2022-09-12 22:27:06 +0700
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 3006)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 5843)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 6770)
+
+

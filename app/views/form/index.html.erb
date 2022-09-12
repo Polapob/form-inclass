@@ -1,10 +1,10 @@
 <h1>Form#index</h1>
-<p>Find me in app/views/form/index.html.erb</p>
+<p>Add new subject and score below</p>
 
 
 <%= form_with url: "/main/test?number_of_choices=#{@number_of_choices.to_i}", method: :get do |form| %>
   <div class = "formContainer">
-    Number of rows = <%= @number_of_choices %>
+    <div>Please fill every text fields before submit a button!</div>
     <%= form.hidden_field :number_of_choices, value: @number_of_choices %>
     <% for i in 1..@number_of_choices.to_i  %>
     <div>
