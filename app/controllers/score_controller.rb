@@ -3,4 +3,4 @@ class ScoreController < ApplicationController
     @sumScore = params[:sumScore]
     @maxScoreSubject = params[:maxScoreSubject]
    end
-end
+end 

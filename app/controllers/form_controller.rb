@@ -29,6 +29,18 @@ class FormController < ApplicationController
       
       end
       if !@is_blank
+
+        for i in 1..@number_of_choices.to_i do
+          @check = Student.where(subject: params["subject_#{i}"].strip).first
+          if (@check != nil)
+            Student.where(subject: params["subject_#{i}"].strip).update_all(points: params["score#{i}"].to_i)
+          else
+            @data = Student.new
+            @data.subject = params["subject_#{i}"].strip    #.strip = avoid 'blank'
+            @data.points = params["mark_#{i}"].to_i
+            @data.save
+          end
+        end
         redirect_to "/score/index?sumScore=#{@sum_score}&maxScoreSubject=#{@max_subject}"
         end
     end

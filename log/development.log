@@ -6977,3 +6977,2459 @@ Processing by ScoreController#index as HTML
 Completed 200 OK in 6ms (Views: 5.3ms | Allocations: 2630)
 
 
+Started GET "/" for 127.0.0.1 at 2022-09-12 20:41:35 +0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1853)
+  Rendered layout layouts/application.html.erb (Duration: 199.6ms | Allocations: 36139)
+Completed 200 OK in 213ms (Views: 204.0ms | ActiveRecord: 0.0ms | Allocations: 39576)
+
+
+Started GET "/main/test?is_first_time=true&number_of_choices=1" for 127.0.0.1 at 2022-09-12 20:41:36 +0700
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3367)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 5961)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 6430)
+
+
+Started GET "/main/test?number_of_choices=1&subject_1=1&mark_1=123" for 127.0.0.1 at 2022-09-12 20:41:42 +0700
+Processing by FormController#index as HTML
+  Parameters: {"number_of_choices"=>"1", "subject_1"=>"1", "mark_1"=>"123"}
+Redirected to http://localhost:3000/score/index?sumScore=123&maxScoreSubject=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 269)
+
+
+Started GET "/score/index?sumScore=123&maxScoreSubject=1" for 127.0.0.1 at 2022-09-12 20:41:42 +0700
+Processing by ScoreController#index as HTML
+  Parameters: {"sumScore"=>"123", "maxScoreSubject"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering score/index.html.erb within layouts/application
+  Rendered score/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 203)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2877)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 3677)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 20:41:54 +0700
+  
+SyntaxError (/home/polapob/Documents/form-inclass/app/controllers/score_table_controller.rb:2: syntax error, unexpected ':', expecting ';' or '\n'
+    def list:
+            ^
+):
+  
+app/controllers/score_table_controller.rb:2: syntax error, unexpected ':', expecting ';' or '\n'
+app/controllers/score_table_controller.rb:2: syntax error, unexpected ':', expecting ';' or '\n'
+app/controllers/score_table_controller.rb:2: syntax error, unexpected ':', expecting ';' or '\n'
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 20:42:48 +0700
+  
+SyntaxError (/home/polapob/Documents/form-inclass/app/controllers/score_table_controller.rb:2: syntax error, unexpected ':', expecting ';' or '\n'
+    def list:
+            ^
+/home/polapob/Documents/form-inclass/app/controllers/score_table_controller.rb:5: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/score_table_controller.rb:2: syntax error, unexpected ':', expecting ';' or '\n'
+app/controllers/score_table_controller.rb:5: syntax error, unexpected `end', expecting end-of-input
+app/controllers/score_table_controller.rb:2: syntax error, unexpected ':', expecting ';' or '\n'
+app/controllers/score_table_controller.rb:5: syntax error, unexpected `end', expecting end-of-input
+app/controllers/score_table_controller.rb:2: syntax error, unexpected ':', expecting ';' or '\n'
+app/controllers/score_table_controller.rb:5: syntax error, unexpected `end', expecting end-of-input
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 20:43:12 +0700
+Processing by ScoreTableController#list as HTML
+Completed 406 Not Acceptable in 1ms (Allocations: 803)
+
+
+  
+ActionController::MissingExactTemplate (ScoreTableController#list is missing a template for request formats: text/html):
+  
+actionpack (7.0.3.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.3.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.3.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.3.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.3.1) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 20:43:50 +0700
+Processing by ScoreTableController#list as HTML
+Completed 406 Not Acceptable in 1ms (Allocations: 729)
+
+
+  
+ActionController::MissingExactTemplate (ScoreTableController#list is missing a template for request formats: text/html):
+  
+actionpack (7.0.3.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.3.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.3.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.3.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.3.1) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 20:44:17 +0700
+Processing by ScoreTableController#list as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 0.4ms | Allocations: 155)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 14386)
+Completed 200 OK in 19ms (Views: 18.1ms | Allocations: 15372)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateStudents (20220912135033)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "subject" varchar, "points" float, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220912135033"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 21:12:27 +0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ScoreTableController#list as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 3.1ms | Allocations: 356)
+  Rendered layout layouts/application.html.erb (Duration: 181.0ms | Allocations: 35264)
+Completed 200 OK in 198ms (Views: 187.6ms | ActiveRecord: 0.0ms | Allocations: 38730)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-12 21:12:39 +0700
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1618)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4320)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 5112)
+
+
+Started GET "/main/test?is_first_time=true&number_of_choices=1" for 127.0.0.1 at 2022-09-12 21:12:41 +0700
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3352)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 5948)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 6403)
+
+
+Started GET "/main/test?number_of_choices=1&subject_1=abac&mark_1=123" for 127.0.0.1 at 2022-09-12 21:12:45 +0700
+Processing by FormController#index as HTML
+  Parameters: {"number_of_choices"=>"1", "subject_1"=>"abac", "mark_1"=>"123"}
+  [1m[36mStudent Load (3.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."subject" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["subject", "abac"], ["LIMIT", 1]]
+  ↳ app/controllers/form_controller.rb:34:in `block in index'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO "students" ("subject", "points", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["subject", "abac"], ["points", 0.0], ["created_at", "2022-09-12 14:12:45.649470"], ["updated_at", "2022-09-12 14:12:45.649470"]]
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 7.5ms | Allocations: 11047)
+
+
+  
+NoMethodError (undefined method `strip' for nil:NilClass
+
+          @check = Student.where(subject: params["subject_#{i}"].strip).first
+                                                                ^^^^^^):
+  
+app/controllers/form_controller.rb:34:in `block in index'
+app/controllers/form_controller.rb:33:in `index'
+Started GET "/main/test?is_first_time=true&number_of_choices=1" for 127.0.0.1 at 2022-09-12 21:15:05 +0700
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 2552)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 16573)
+Completed 200 OK in 18ms (Views: 17.4ms | Allocations: 17254)
+
+
+Started GET "/main/test?number_of_choices=1&subject_1=a&mark_1=123" for 127.0.0.1 at 2022-09-12 21:15:09 +0700
+Processing by FormController#index as HTML
+  Parameters: {"number_of_choices"=>"1", "subject_1"=>"a", "mark_1"=>"123"}
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/form_controller.rb:34:in `block in index'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."subject" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["subject", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/form_controller.rb:34:in `block in index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO "students" ("subject", "points", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["subject", "a"], ["points", 123.0], ["created_at", "2022-09-12 14:15:09.190143"], ["updated_at", "2022-09-12 14:15:09.190143"]]
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 3.2ms | Allocations: 7193)
+
+
+  
+NoMethodError (undefined method `strip' for nil:NilClass
+
+          @check = Student.where(subject: params["subject_#{i}"].strip).first
+                                                                ^^^^^^):
+  
+app/controllers/form_controller.rb:34:in `block in index'
+app/controllers/form_controller.rb:33:in `index'
+Started GET "/main/test?is_first_time=true&number_of_choices=1" for 127.0.0.1 at 2022-09-12 21:15:42 +0700
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2552)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 16599)
+Completed 200 OK in 26ms (Views: 25.7ms | Allocations: 17281)
+
+
+Started GET "/main/test?number_of_choices=1&subject_1=a&mark_1=123" for 127.0.0.1 at 2022-09-12 21:15:43 +0700
+Processing by FormController#index as HTML
+  Parameters: {"number_of_choices"=>"1", "subject_1"=>"a", "mark_1"=>"123"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/form_controller.rb:34:in `block in index'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."subject" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["subject", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/form_controller.rb:34:in `block in index'
+  [1m[36mStudent Update All (2.1ms)[0m  [1m[33mUPDATE "students" SET "points" = ? WHERE "students"."subject" = ?[0m  [["points", 0.0], ["subject", "a"]]
+  ↳ app/controllers/form_controller.rb:36:in `block in index'
+Redirected to http://localhost:3000/score/index?sumScore=123&maxScoreSubject=a
+Completed 302 Found in 16ms (ActiveRecord: 5.9ms | Allocations: 4675)
+
+
+Started GET "/score/index?sumScore=123&maxScoreSubject=a" for 127.0.0.1 at 2022-09-12 21:15:43 +0700
+Processing by ScoreController#index as HTML
+  Parameters: {"sumScore"=>"123", "maxScoreSubject"=>"a"}
+  Rendering layout layouts/application.html.erb
+  Rendering score/index.html.erb within layouts/application
+  Rendered score/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 205)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 2895)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 3694)
+
+
+Started GET "/score/index?sumScore=123&maxScoreSubject=a" for 127.0.0.1 at 2022-09-12 21:16:40 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ScoreController#index as HTML
+  Parameters: {"sumScore"=>"123", "maxScoreSubject"=>"a"}
+  Rendering layout layouts/application.html.erb
+  Rendering score/index.html.erb within layouts/application
+  Rendered score/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 569)
+  Rendered layout layouts/application.html.erb (Duration: 143.6ms | Allocations: 34915)
+Completed 200 OK in 153ms (Views: 147.0ms | ActiveRecord: 0.0ms | Allocations: 38380)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 21:16:43 +0700
+Processing by ScoreTableController#list as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 0.5ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2855)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 3661)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 21:27:18 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 6.6ms | Allocations: 7154)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 21338)
+Completed 200 OK in 41ms (Views: 22.2ms | ActiveRecord: 1.2ms | Allocations: 28972)
+
+
+Started GET "/score/edit?subject_edit=abac&point_edit=0&id_edit=1&commit=Edit" for 127.0.0.1 at 2022-09-12 21:27:21 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/score/edit"):
+  
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 21:27:21 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 3.4ms | Allocations: 6376)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 8949)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 10083)
+
+
+Started GET "/score/list?sumScore=0.0&maxScoreSubject=a&id_edit=1&commit=Delete" for 127.0.0.1 at 2022-09-12 21:27:22 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"0.0", "maxScoreSubject"=>"a", "id_edit"=>"1", "commit"=>"Delete"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 2.9ms | Allocations: 6348)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 8760)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.1ms | Allocations: 9728)
+
+
+Started GET "/score/edit?subject_edit=a&point_edit=0&id_edit=2&commit=Edit" for 127.0.0.1 at 2022-09-12 21:27:23 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/score/edit"):
+  
+Started GET "/score/list?sumScore=0.0&maxScoreSubject=a&id_edit=1&commit=Delete" for 127.0.0.1 at 2022-09-12 21:27:23 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"0.0", "maxScoreSubject"=>"a", "id_edit"=>"1", "commit"=>"Delete"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 2.7ms | Allocations: 6346)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 8775)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.1ms | Allocations: 9750)
+
+
+Started GET "/score/edit?subject_edit=abac&point_edit=0&id_edit=1&commit=Edit" for 127.0.0.1 at 2022-09-12 21:27:24 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/score/edit"):
+  
+Started GET "/score/list?sumScore=0.0&maxScoreSubject=a&id_edit=1&commit=Delete" for 127.0.0.1 at 2022-09-12 21:27:24 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"0.0", "maxScoreSubject"=>"a", "id_edit"=>"1", "commit"=>"Delete"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 6.1ms | Allocations: 6346)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 8773)
+Completed 200 OK in 15ms (Views: 10.0ms | ActiveRecord: 0.1ms | Allocations: 9750)
+
+
+Started GET "/score/list?sumScore=0.0&maxScoreSubject=a&id_edit=1&commit=Delete" for 127.0.0.1 at 2022-09-12 21:27:25 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"0.0", "maxScoreSubject"=>"a", "id_edit"=>"1", "commit"=>"Delete"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 5.8ms | Allocations: 6347)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 8774)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.1ms | Allocations: 9739)
+
+
+Started GET "/score/list?sumScore=0.0&maxScoreSubject=a&id_edit=1&commit=Delete" for 127.0.0.1 at 2022-09-12 21:28:26 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"0.0", "maxScoreSubject"=>"a", "id_edit"=>"1", "commit"=>"Delete"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 8.6ms | Allocations: 6933)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 9774)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.1ms | Allocations: 11300)
+
+
+Started GET "/score/list?sumScore=0.0&maxScoreSubject=a&id_edit=1&commit=Delete2" for 127.0.0.1 at 2022-09-12 21:28:29 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"0.0", "maxScoreSubject"=>"a", "id_edit"=>"1", "commit"=>"Delete2"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 2.6ms | Allocations: 6347)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 8741)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 9834)
+
+
+Started GET "/score/list?sumScore=0.0&maxScoreSubject=a&id_edit=1&commit=Delete2" for 127.0.0.1 at 2022-09-12 21:28:37 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"0.0", "maxScoreSubject"=>"a", "id_edit"=>"1", "commit"=>"Delete2"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 5.3ms | Allocations: 6929)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 9780)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.1ms | Allocations: 11312)
+
+
+Started GET "/score/list?sumScore=0.0&maxScoreSubject=a&id_edit=1&commit=delete" for 127.0.0.1 at 2022-09-12 21:28:39 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"0.0", "maxScoreSubject"=>"a", "id_edit"=>"1", "commit"=>"delete"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 2.5ms | Allocations: 6348)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 8753)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 9848)
+
+
+Started GET "/score/edit?subject_edit=abac&point_edit=0&id_edit=1&commit=edit" for 127.0.0.1 at 2022-09-12 21:28:40 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/score/edit"):
+  
+Started GET "/score/list?sumScore=0.0&maxScoreSubject=a&id_edit=1&commit=delete" for 127.0.0.1 at 2022-09-12 21:28:40 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"0.0", "maxScoreSubject"=>"a", "id_edit"=>"1", "commit"=>"delete"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 6.1ms | Allocations: 6346)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 8785)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.1ms | Allocations: 9752)
+
+
+Started GET "/score/list?sumScore=0.0&maxScoreSubject=a&id_edit=1&commit=delete" for 127.0.0.1 at 2022-09-12 21:29:45 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"0.0", "maxScoreSubject"=>"a", "id_edit"=>"1", "commit"=>"delete"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/score_table_controller.rb:5:in `list'
+  [1m[36mStudent Delete All (2.1ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/score_table_controller.rb:5:in `list'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 1.9ms | Allocations: 3249)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 17268)
+Completed 200 OK in 29ms (Views: 17.3ms | ActiveRecord: 3.0ms | Allocations: 22993)
+
+
+Started GET "/score/list?sumScore=0.0&maxScoreSubject=a&id_edit=2&commit=delete" for 127.0.0.1 at 2022-09-12 21:29:47 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"0.0", "maxScoreSubject"=>"a", "id_edit"=>"2", "commit"=>"delete"}
+  [1m[36mStudent Delete All (1.7ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/score_table_controller.rb:5:in `list'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2442)
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 1.8ms | Allocations: 3997)
+
+
+Started GET "/score/list?sumScore=0.0&maxScoreSubject=a&id_edit=2&commit=delete" for 127.0.0.1 at 2022-09-12 21:29:48 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"0.0", "maxScoreSubject"=>"a", "id_edit"=>"2", "commit"=>"delete"}
+  [1m[36mStudent Delete All (0.1ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/score_table_controller.rb:5:in `list'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2434)
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.2ms | Allocations: 3828)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-12 21:32:35 +0700
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1307)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 15368)
+Completed 200 OK in 22ms (Views: 21.1ms | Allocations: 16143)
+
+
+Started GET "/main/test?is_first_time=true&number_of_choices=2" for 127.0.0.1 at 2022-09-12 21:32:39 +0700
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 5147)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 7743)
+Completed 200 OK in 9ms (Views: 8.7ms | Allocations: 8153)
+
+
+Started GET "/main/test?number_of_choices=2&subject_1=a&mark_1=123&subject_2=&mark_2=" for 127.0.0.1 at 2022-09-12 21:32:41 +0700
+Processing by FormController#index as HTML
+  Parameters: {"number_of_choices"=>"2", "subject_1"=>"a", "mark_1"=>"123", "subject_2"=>"", "mark_2"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 4374)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 6766)
+Completed 200 OK in 6ms (Views: 5.8ms | Allocations: 7129)
+
+
+Started GET "/main/test?number_of_choices=2&subject_1=a&mark_1=123&subject_2=ab&mark_2=1324" for 127.0.0.1 at 2022-09-12 21:32:45 +0700
+Processing by FormController#index as HTML
+  Parameters: {"number_of_choices"=>"2", "subject_1"=>"a", "mark_1"=>"123", "subject_2"=>"ab", "mark_2"=>"1324"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/form_controller.rb:34:in `block in index'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."subject" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["subject", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/form_controller.rb:34:in `block in index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("subject", "points", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["subject", "a"], ["points", 123.0], ["created_at", "2022-09-12 14:32:45.814671"], ["updated_at", "2022-09-12 14:32:45.814671"]]
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."subject" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["subject", "ab"], ["LIMIT", 1]]
+  ↳ app/controllers/form_controller.rb:34:in `block in index'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO "students" ("subject", "points", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["subject", "ab"], ["points", 1324.0], ["created_at", "2022-09-12 14:32:45.823094"], ["updated_at", "2022-09-12 14:32:45.823094"]]
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+Redirected to http://localhost:3000/score/index?sumScore=1447&maxScoreSubject=ab
+Completed 302 Found in 25ms (ActiveRecord: 6.2ms | Allocations: 9255)
+
+
+Started GET "/score/index?sumScore=1447&maxScoreSubject=ab" for 127.0.0.1 at 2022-09-12 21:32:45 +0700
+Processing by ScoreController#index as HTML
+  Parameters: {"sumScore"=>"1447", "maxScoreSubject"=>"ab"}
+  Rendering layout layouts/application.html.erb
+  Rendering score/index.html.erb within layouts/application
+  Rendered score/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 313)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2979)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 3773)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 21:32:48 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 5.2ms | Allocations: 6413)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 9098)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 10691)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-12 21:32:51 +0700
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1028)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3453)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3743)
+
+
+Started GET "/main/test?is_first_time=true&number_of_choices=1" for 127.0.0.1 at 2022-09-12 21:32:52 +0700
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 2527)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 4927)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 5224)
+
+
+Started GET "/main/test?number_of_choices=1&subject_1=poa&mark_1=123" for 127.0.0.1 at 2022-09-12 21:32:57 +0700
+Processing by FormController#index as HTML
+  Parameters: {"number_of_choices"=>"1", "subject_1"=>"poa", "mark_1"=>"123"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."subject" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["subject", "poa"], ["LIMIT", 1]]
+  ↳ app/controllers/form_controller.rb:34:in `block in index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mStudent Create (0.2ms)[0m  [1m[32mINSERT INTO "students" ("subject", "points", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["subject", "poa"], ["points", 123.0], ["created_at", "2022-09-12 14:32:57.369240"], ["updated_at", "2022-09-12 14:32:57.369240"]]
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+Redirected to http://localhost:3000/score/index?sumScore=123&maxScoreSubject=poa
+Completed 302 Found in 11ms (ActiveRecord: 6.1ms | Allocations: 2752)
+
+
+Started GET "/score/index?sumScore=123&maxScoreSubject=poa" for 127.0.0.1 at 2022-09-12 21:32:57 +0700
+Processing by ScoreController#index as HTML
+  Parameters: {"sumScore"=>"123", "maxScoreSubject"=>"poa"}
+  Rendering layout layouts/application.html.erb
+  Rendering score/index.html.erb within layouts/application
+  Rendered score/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 89)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2513)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 2795)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 21:32:58 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 17.4ms | Allocations: 9436)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 11850)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.2ms | Allocations: 12837)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-12 21:50:36 +0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1853)
+  Rendered layout layouts/application.html.erb (Duration: 130.3ms | Allocations: 36856)
+Completed 200 OK in 139ms (Views: 133.0ms | ActiveRecord: 0.0ms | Allocations: 40293)
+
+
+Started GET "/main/test?is_first_time=true&number_of_choices=2" for 127.0.0.1 at 2022-09-12 21:50:39 +0700
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 5201)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 7796)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 8266)
+
+
+Started GET "/main/test?number_of_choices=2&subject_1=qwee&mark_1=12&subject_2=czxv&mark_2=123" for 127.0.0.1 at 2022-09-12 21:50:48 +0700
+Processing by FormController#index as HTML
+  Parameters: {"number_of_choices"=>"2", "subject_1"=>"qwee", "mark_1"=>"12", "subject_2"=>"czxv", "mark_2"=>"123"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."subject" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["subject", "qwee"], ["LIMIT", 1]]
+  ↳ app/controllers/form_controller.rb:34:in `block in index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("subject", "points", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["subject", "qwee"], ["points", 12.0], ["created_at", "2022-09-12 14:50:48.980839"], ["updated_at", "2022-09-12 14:50:48.980839"]]
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."subject" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["subject", "czxv"], ["LIMIT", 1]]
+  ↳ app/controllers/form_controller.rb:34:in `block in index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO "students" ("subject", "points", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["subject", "czxv"], ["points", 123.0], ["created_at", "2022-09-12 14:50:48.990660"], ["updated_at", "2022-09-12 14:50:48.990660"]]
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+Redirected to http://localhost:3000/score/index?sumScore=135&maxScoreSubject=czxv
+Completed 302 Found in 35ms (ActiveRecord: 8.5ms | Allocations: 12224)
+
+
+Started GET "/score/index?sumScore=135&maxScoreSubject=czxv" for 127.0.0.1 at 2022-09-12 21:50:49 +0700
+Processing by ScoreController#index as HTML
+  Parameters: {"sumScore"=>"135", "maxScoreSubject"=>"czxv"}
+  Rendering layout layouts/application.html.erb
+  Rendering score/index.html.erb within layouts/application
+  Rendered score/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 329)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2984)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 3783)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 21:50:50 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 13.0ms | Allocations: 6914)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 7021)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.3ms | Allocations: 8817)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `elefment' for #<ActionView::Base:0x0000000000acd0>
+
+                        '.freeze;@output_buffer.append=( form.hidden_field :point_edit, value: elefment[1].to_i );@output_buffer.safe_append='
+                                                                                               ^^^^^^^^
+Did you mean?  element):
+    24:                 <td>
+    25:                     <%= form_with url: "/score/edit", method: :get do |form| %>
+    26:                         <%= form.hidden_field :subject_edit, value: element[0] %>
+    27:                         <%= form.hidden_field :point_edit, value: elefment[1].to_i %>
+    28:                         <%= form.hidden_field :id_edit, value: element[2] %>
+    29:                         <%= form.submit "edit" %>
+    30:                     <% end %>
+  
+app/views/score_table/list.html.erb:27
+app/views/score_table/list.html.erb:25
+app/views/score_table/list.html.erb:18:in `each'
+app/views/score_table/list.html.erb:18:in `each_with_index'
+app/views/score_table/list.html.erb:18
+Started GET "/score/index?sumScore=135&maxScoreSubject=czxv" for 127.0.0.1 at 2022-09-12 21:51:30 +0700
+Processing by ScoreController#index as HTML
+  Parameters: {"sumScore"=>"135", "maxScoreSubject"=>"czxv"}
+  Rendering layout layouts/application.html.erb
+  Rendering score/index.html.erb within layouts/application
+  Rendered score/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 314)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3188)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 4053)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 21:51:32 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 14.5ms | Allocations: 16215)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 18881)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.4ms | Allocations: 20404)
+
+
+Started GET "/score/edit?subject_edit=poa&point_edit=123&id_edit=5&commit=edit" for 127.0.0.1 at 2022-09-12 21:51:34 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/score/edit"):
+  
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 21:51:34 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 8.8ms | Allocations: 15633)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 18149)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.1ms | Allocations: 19303)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 21:52:30 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 7.9ms | Allocations: 16161)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 30376)
+Completed 200 OK in 37ms (Views: 25.8ms | ActiveRecord: 1.3ms | Allocations: 35176)
+
+
+Started GET "/score/edit?subject_edit=a&point_edit=123&id_edit=3&commit=edit" for 127.0.0.1 at 2022-09-12 21:52:31 +0700
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for ScoreController):
+  
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 21:52:31 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 10.1ms | Allocations: 15639)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 18198)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.2ms | Allocations: 19362)
+
+
+Started GET "/score/edit?subject_edit=a&point_edit=123&id_edit=3&commit=edit" for 127.0.0.1 at 2022-09-12 21:52:59 +0700
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for ScoreController):
+  
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 21:52:59 +0700
+  
+AbstractController::ActionNotFound (The action 'list' could not be found for ScoreController):
+  
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/main/test?is_first_time=true&number_of_choices=2" for 127.0.0.1 at 2022-09-12 21:53:24 +0700
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 4821)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 18845)
+Completed 200 OK in 23ms (Views: 21.1ms | Allocations: 19652)
+
+
+Started GET "/main/test?is_first_time=true&number_of_choices=2" for 127.0.0.1 at 2022-09-12 21:55:15 +0700
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 4383)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 18402)
+Completed 200 OK in 23ms (Views: 22.3ms | Allocations: 19077)
+
+
+Started GET "/main" for 127.0.0.1 at 2022-09-12 21:55:19 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/main"):
+  
+Started GET "/" for 127.0.0.1 at 2022-09-12 21:55:23 +0700
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1247)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3684)
+Completed 200 OK in 9ms (Views: 8.5ms | Allocations: 4020)
+
+
+Started GET "/main/list" for 127.0.0.1 at 2022-09-12 21:55:28 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/main/list"):
+  
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 21:55:38 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 8.0ms | Allocations: 15693)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 18360)
+Completed 200 OK in 28ms (Views: 14.2ms | ActiveRecord: 1.2ms | Allocations: 22813)
+
+
+Started GET "/score/list?sumScore=1705.0&maxScoreSubject=ab&id_edit=3&commit=delete" for 127.0.0.1 at 2022-09-12 21:55:53 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"1705.0", "maxScoreSubject"=>"ab", "id_edit"=>"3", "commit"=>"delete"}
+  [1m[36mStudent Delete All (2.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/score_table_controller.rb:5:in `list'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 10.8ms | Allocations: 12530)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 14950)
+Completed 200 OK in 22ms (Views: 15.9ms | ActiveRecord: 2.3ms | Allocations: 16638)
+
+
+Started GET "/score/edit?subject_edit=ab&point_edit=1324&id_edit=4&commit=edit" for 127.0.0.1 at 2022-09-12 21:56:59 +0700
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for ScoreController):
+  
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/score/list?sumScore=1705.0&maxScoreSubject=ab&id_edit=3&commit=delete" for 127.0.0.1 at 2022-09-12 21:56:59 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"1705.0", "maxScoreSubject"=>"ab", "id_edit"=>"3", "commit"=>"delete"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/score_table_controller.rb:5:in `list'
+  [1m[36mStudent Delete All (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/score_table_controller.rb:5:in `list'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 12.2ms | Allocations: 12598)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 26615)
+Completed 200 OK in 39ms (Views: 29.7ms | ActiveRecord: 1.2ms | Allocations: 31541)
+
+
+Started GET "/score/edit?subject_edit=ab&point_edit=1324&id_edit=4&commit=edit" for 127.0.0.1 at 2022-09-12 21:57:10 +0700
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for ScoreController):
+  
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/score/list?sumScore=1705.0&maxScoreSubject=ab&id_edit=3&commit=delete" for 127.0.0.1 at 2022-09-12 21:57:10 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"1705.0", "maxScoreSubject"=>"ab", "id_edit"=>"3", "commit"=>"delete"}
+  [1m[36mStudent Delete All (0.1ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/score_table_controller.rb:5:in `list'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 5.4ms | Allocations: 12528)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 14943)
+Completed 200 OK in 18ms (Views: 13.3ms | ActiveRecord: 0.2ms | Allocations: 16556)
+
+
+Started GET "/score/edit?subject_edit=ab&point_edit=1324&id_edit=4&commit=edit" for 127.0.0.1 at 2022-09-12 21:57:11 +0700
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for ScoreController):
+  
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/score/list?sumScore=1705.0&maxScoreSubject=ab&id_edit=3&commit=delete" for 127.0.0.1 at 2022-09-12 21:57:11 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"1705.0", "maxScoreSubject"=>"ab", "id_edit"=>"3", "commit"=>"delete"}
+  [1m[36mStudent Delete All (0.1ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/score_table_controller.rb:5:in `list'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 5.8ms | Allocations: 12529)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 14950)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.2ms | Allocations: 16411)
+
+
+Started GET "/score/edit?subject_edit=ab&point_edit=1324&id_edit=4&commit=edit" for 127.0.0.1 at 2022-09-12 21:57:11 +0700
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for ScoreController):
+  
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/score/list?sumScore=1705.0&maxScoreSubject=ab&id_edit=3&commit=delete" for 127.0.0.1 at 2022-09-12 21:57:11 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"1705.0", "maxScoreSubject"=>"ab", "id_edit"=>"3", "commit"=>"delete"}
+  [1m[36mStudent Delete All (0.1ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/score_table_controller.rb:5:in `list'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 6.8ms | Allocations: 12529)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 14968)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.2ms | Allocations: 16429)
+
+
+Started GET "/score/edit?subject_edit=ab&point_edit=1324&id_edit=4&commit=edit" for 127.0.0.1 at 2022-09-12 21:57:12 +0700
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for ScoreController):
+  
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/score/list?sumScore=1705.0&maxScoreSubject=ab&id_edit=3&commit=delete" for 127.0.0.1 at 2022-09-12 21:57:12 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"1705.0", "maxScoreSubject"=>"ab", "id_edit"=>"3", "commit"=>"delete"}
+  [1m[36mStudent Delete All (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/score_table_controller.rb:5:in `list'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 11.9ms | Allocations: 12530)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 14950)
+Completed 200 OK in 21ms (Views: 16.3ms | ActiveRecord: 0.2ms | Allocations: 16411)
+
+
+Started GET "/score/edit" for 127.0.0.1 at 2022-09-12 21:57:56 +0700
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for ScoreController):
+  
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/score/edit" for 127.0.0.1 at 2022-09-12 21:58:35 +0700
+  
+SyntaxError (/home/polapob/Documents/form-inclass/config/routes.rb:3: syntax error, unexpected string literal, expecting `do' or '{' or '('
+  get 'score/edit', to "score_table#edit"
+                       ^
+):
+  
+config/routes.rb:3: syntax error, unexpected string literal, expecting `do' or '{' or '('
+config/routes.rb:3: syntax error, unexpected string literal, expecting `do' or '{' or '('
+config/routes.rb:3: syntax error, unexpected string literal, expecting `do' or '{' or '('
+Started GET "/score/edit" for 127.0.0.1 at 2022-09-12 21:58:47 +0700
+Processing by ScoreTableController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 3552)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 17567)
+Completed 200 OK in 24ms (Views: 23.1ms | Allocations: 18310)
+
+
+Started GET "/score/edit?subject_update=qwerty&point_update=1234&form_edit=true&id_update=0&commit=submit" for 127.0.0.1 at 2022-09-12 21:59:31 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_update"=>"qwerty", "point_update"=>"1234", "form_edit"=>"true", "id_update"=>"0", "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/score_table_controller.rb:40:in `edit'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/score_table_controller.rb:40:in `edit'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.0ms | Allocations: 11055)
+
+
+  
+NoMethodError (undefined method `subject=' for nil:NilClass
+
+            @check.subject = @subject_update.strip
+                  ^^^^^^^^^^):
+  
+app/controllers/score_table_controller.rb:41:in `edit'
+Started GET "/score/edit?subject_edit=ab&point_edit=1324&id_edit=4&commit=edit" for 127.0.0.1 at 2022-09-12 22:00:42 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_edit"=>"ab", "point_edit"=>"1324", "id_edit"=>"4", "commit"=>"edit"}
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 2.0ms | Allocations: 3092)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 5631)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 5956)
+
+
+Started GET "/score/edit?subject_update=ab&point_update=1324&form_edit=true&id_update=4&commit=submit" for 127.0.0.1 at 2022-09-12 22:00:43 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_update"=>"ab", "point_update"=>"1324", "form_edit"=>"true", "id_update"=>"4", "commit"=>"submit"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/score_table_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3508)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 5914)
+Completed 200 OK in 17ms (Views: 12.8ms | ActiveRecord: 0.1ms | Allocations: 8086)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:00:50 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 6.5ms | Allocations: 12532)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 14941)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.2ms | Allocations: 16039)
+
+
+Started GET "/score/edit?subject_edit=ab&point_edit=1324&id_edit=4&commit=edit" for 127.0.0.1 at 2022-09-12 22:00:52 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_edit"=>"ab", "point_edit"=>"1324", "id_edit"=>"4", "commit"=>"edit"}
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 3066)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 5460)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 5747)
+
+
+Started GET "/score/edit?subject_update=ab&point_update=1324&form_edit=true&id_update=4&commit=submit" for 127.0.0.1 at 2022-09-12 22:00:55 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_update"=>"ab", "point_update"=>"1324", "form_edit"=>"true", "id_update"=>"4", "commit"=>"submit"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/score_table_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3507)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 5919)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 6959)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:00:56 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 7.0ms | Allocations: 12529)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 14932)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.1ms | Allocations: 15926)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:00:59 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 7.6ms | Allocations: 12529)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 14941)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.1ms | Allocations: 15929)
+
+
+Started GET "/score/edit?subject_edit=ab&point_edit=1324&id_edit=4&commit=edit" for 127.0.0.1 at 2022-09-12 22:01:01 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_edit"=>"ab", "point_edit"=>"1324", "id_edit"=>"4", "commit"=>"edit"}
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 3066)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 5460)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 5747)
+
+
+Started GET "/score/edit?subject_edit=ab&point_edit=1324&id_edit=4&commit=edit" for 127.0.0.1 at 2022-09-12 22:01:02 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_edit"=>"ab", "point_edit"=>"1324", "id_edit"=>"4", "commit"=>"edit"}
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 3066)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 5463)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 5747)
+
+
+Started GET "/score/edit?subject_update=P%27new&point_update=1324&form_edit=true&id_update=4&commit=submit" for 127.0.0.1 at 2022-09-12 22:01:14 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_update"=>"P'new", "point_update"=>"1324", "form_edit"=>"true", "id_update"=>"4", "commit"=>"submit"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/score_table_controller.rb:40:in `edit'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/score_table_controller.rb:43:in `edit'
+  [1m[36mStudent Update (0.3ms)[0m  [1m[33mUPDATE "students" SET "subject" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["subject", "P'new"], ["updated_at", "2022-09-12 15:01:14.274080"], ["id", 4]]
+  ↳ app/controllers/score_table_controller.rb:43:in `edit'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/score_table_controller.rb:43:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 25.9ms | Allocations: 3507)
+  Rendered layout layouts/application.html.erb (Duration: 55.2ms | Allocations: 5913)
+Completed 200 OK in 65ms (Views: 57.4ms | ActiveRecord: 1.9ms | Allocations: 8727)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:01:15 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 8.5ms | Allocations: 12529)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 14947)
+Completed 200 OK in 33ms (Views: 13.5ms | ActiveRecord: 0.2ms | Allocations: 15939)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:02:21 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 6.3ms | Allocations: 12529)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 14950)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.1ms | Allocations: 15939)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-12 22:02:24 +0700
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1052)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3732)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 4383)
+
+
+Started GET "/score/list?sumScore=1582.0&maxScoreSubject=P%27new&id_edit=4&commit=delete" for 127.0.0.1 at 2022-09-12 22:02:42 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"1582.0", "maxScoreSubject"=>"P'new", "id_edit"=>"4", "commit"=>"delete"}
+  [1m[36mStudent Delete All (1.8ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/score_table_controller.rb:5:in `list'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 6.2ms | Allocations: 9441)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 11846)
+Completed 200 OK in 16ms (Views: 11.6ms | ActiveRecord: 1.9ms | Allocations: 13464)
+
+
+Started GET "/score/list?sumScore=258.0&maxScoreSubject=czxv&id_edit=5&commit=delete" for 127.0.0.1 at 2022-09-12 22:02:43 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"258.0", "maxScoreSubject"=>"czxv", "id_edit"=>"5", "commit"=>"delete"}
+  [1m[36mStudent Delete All (2.1ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/score_table_controller.rb:5:in `list'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 3.3ms | Allocations: 6341)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 8735)
+Completed 200 OK in 15ms (Views: 10.0ms | ActiveRecord: 2.3ms | Allocations: 10174)
+
+
+Started GET "/score/list?sumScore=135.0&maxScoreSubject=czxv&id_edit=6&commit=delete" for 127.0.0.1 at 2022-09-12 22:02:43 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"135.0", "maxScoreSubject"=>"czxv", "id_edit"=>"6", "commit"=>"delete"}
+  [1m[36mStudent Delete All (2.3ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/score_table_controller.rb:5:in `list'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 2.3ms | Allocations: 3249)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 5673)
+Completed 200 OK in 23ms (Views: 10.9ms | ActiveRecord: 2.5ms | Allocations: 7107)
+
+
+Started GET "/score/list?sumScore=123.0&maxScoreSubject=czxv&id_edit=7&commit=delete" for 127.0.0.1 at 2022-09-12 22:02:43 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"123.0", "maxScoreSubject"=>"czxv", "id_edit"=>"7", "commit"=>"delete"}
+  [1m[36mStudent Delete All (2.1ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/score_table_controller.rb:5:in `list'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2437)
+Completed 200 OK in 11ms (Views: 5.3ms | ActiveRecord: 2.3ms | Allocations: 3844)
+
+
+Started GET "/score/list?sumScore=123.0&maxScoreSubject=czxv&id_edit=7&commit=delete" for 127.0.0.1 at 2022-09-12 22:02:45 +0700
+Processing by ScoreTableController#list as HTML
+  Parameters: {"sumScore"=>"123.0", "maxScoreSubject"=>"czxv", "id_edit"=>"7", "commit"=>"delete"}
+  [1m[36mStudent Delete All (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/score_table_controller.rb:5:in `list'
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2434)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.2ms | Allocations: 3829)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-12 22:02:46 +0700
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1020)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3413)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 3681)
+
+
+Started GET "/main/test?is_first_time=true&number_of_choices=2" for 127.0.0.1 at 2022-09-12 22:02:50 +0700
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 4366)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 6781)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 7085)
+
+
+Started GET "/main/test?is_first_time=true&number_of_choices=1" for 127.0.0.1 at 2022-09-12 22:02:53 +0700
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 2521)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 4924)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 5222)
+
+
+Started GET "/main/test?number_of_choices=1&subject_1=Long+live+the+king+&mark_1=9999999999999" for 127.0.0.1 at 2022-09-12 22:03:13 +0700
+Processing by FormController#index as HTML
+  Parameters: {"number_of_choices"=>"1", "subject_1"=>"Long live the king ", "mark_1"=>"9999999999999"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."subject" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["subject", "Long live the king"], ["LIMIT", 1]]
+  ↳ app/controllers/form_controller.rb:34:in `block in index'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("subject", "points", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["subject", "Long live the king"], ["points", 9999999999999.0], ["created_at", "2022-09-12 15:03:13.035559"], ["updated_at", "2022-09-12 15:03:13.035559"]]
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+Redirected to http://localhost:3000/score/index?sumScore=9999999999999&maxScoreSubject=Long live the king 
+Completed 302 Found in 9ms (ActiveRecord: 2.7ms | Allocations: 2720)
+
+
+Started GET "/score/index?sumScore=9999999999999&maxScoreSubject=Long%20live%20the%20king" for 127.0.0.1 at 2022-09-12 22:03:13 +0700
+Processing by ScoreController#index as HTML
+  Parameters: {"sumScore"=>"9999999999999", "maxScoreSubject"=>"Long live the king"}
+  Rendering layout layouts/application.html.erb
+  Rendering score/index.html.erb within layouts/application
+  Rendered score/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 319)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 2994)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.0ms | Allocations: 3789)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:03:15 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 1.7ms | Allocations: 3264)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 5681)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.1ms | Allocations: 6779)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:04:24 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 3.9ms | Allocations: 3933)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 6779)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.2ms | Allocations: 8319)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:04:26 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 2.9ms | Allocations: 3316)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 5743)
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 6837)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:04:36 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 3.7ms | Allocations: 3933)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 6794)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.1ms | Allocations: 8321)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-12 22:04:53 +0700
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1336)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4188)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 5046)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-12 22:05:03 +0700
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1337)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 4176)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 5031)
+
+
+Started GET "/main/list" for 127.0.0.1 at 2022-09-12 22:05:14 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/main/list"):
+  
+Started GET "/test/list" for 127.0.0.1 at 2022-09-12 22:05:19 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/test/list"):
+  
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:05:23 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 3.1ms | Allocations: 3930)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 6606)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 8067)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-12 22:05:25 +0700
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1028)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3440)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 3732)
+
+
+Started GET "/main/test?is_first_time=true&number_of_choices=1" for 127.0.0.1 at 2022-09-12 22:05:31 +0700
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 3037)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 5869)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 6756)
+
+
+Started GET "/main/test?number_of_choices=1&subject_1=Sirikit&mark_1=0" for 127.0.0.1 at 2022-09-12 22:05:43 +0700
+Processing by FormController#index as HTML
+  Parameters: {"number_of_choices"=>"1", "subject_1"=>"Sirikit", "mark_1"=>"0"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."subject" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["subject", "Sirikit"], ["LIMIT", 1]]
+  ↳ app/controllers/form_controller.rb:34:in `block in index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mStudent Create (13.3ms)[0m  [1m[32mINSERT INTO "students" ("subject", "points", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["subject", "Sirikit"], ["points", 0.0], ["created_at", "2022-09-12 15:05:43.949847"], ["updated_at", "2022-09-12 15:05:43.949847"]]
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+Redirected to http://localhost:3000/score/index?sumScore=0&maxScoreSubject=
+Completed 302 Found in 65ms (ActiveRecord: 17.6ms | Allocations: 2755)
+
+
+Started GET "/score/index?sumScore=0&maxScoreSubject=" for 127.0.0.1 at 2022-09-12 22:05:44 +0700
+Processing by ScoreController#index as HTML
+  Parameters: {"sumScore"=>"0", "maxScoreSubject"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering score/index.html.erb within layouts/application
+  Rendered score/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 316)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3004)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 3670)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:05:52 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 9.8ms | Allocations: 7025)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 9680)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 0.2ms | Allocations: 11164)
+
+
+Started GET "/main/test?number_of_choices=1&subject_1=Uncle+SomChai&mark_1=9" for 127.0.0.1 at 2022-09-12 22:06:50 +0700
+Processing by FormController#index as HTML
+  Parameters: {"number_of_choices"=>"1", "subject_1"=>"Uncle SomChai", "mark_1"=>"9"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."subject" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["subject", "Uncle SomChai"], ["LIMIT", 1]]
+  ↳ app/controllers/form_controller.rb:34:in `block in index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("subject", "points", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["subject", "Uncle SomChai"], ["points", 9.0], ["created_at", "2022-09-12 15:06:50.684163"], ["updated_at", "2022-09-12 15:06:50.684163"]]
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+Redirected to http://localhost:3000/score/index?sumScore=9&maxScoreSubject=Uncle SomChai
+Completed 302 Found in 12ms (ActiveRecord: 3.8ms | Allocations: 2766)
+
+
+Started GET "/score/index?sumScore=9&maxScoreSubject=Uncle%20SomChai" for 127.0.0.1 at 2022-09-12 22:06:50 +0700
+Processing by ScoreController#index as HTML
+  Parameters: {"sumScore"=>"9", "maxScoreSubject"=>"Uncle SomChai"}
+  Rendering layout layouts/application.html.erb
+  Rendering score/index.html.erb within layouts/application
+  Rendered score/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2484)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 2782)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:06:54 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 6.1ms | Allocations: 9503)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 11912)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.2ms | Allocations: 12898)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-12 22:06:56 +0700
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1246)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3663)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 4005)
+
+
+Started GET "/main/test?is_first_time=true&number_of_choices=1" for 127.0.0.1 at 2022-09-12 22:06:57 +0700
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2527)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 4975)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 5278)
+
+
+Started GET "/main/test?number_of_choices=1&subject_1=SirikitV2&mark_1=12" for 127.0.0.1 at 2022-09-12 22:07:04 +0700
+Processing by FormController#index as HTML
+  Parameters: {"number_of_choices"=>"1", "subject_1"=>"SirikitV2", "mark_1"=>"12"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."subject" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["subject", "SirikitV2"], ["LIMIT", 1]]
+  ↳ app/controllers/form_controller.rb:34:in `block in index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO "students" ("subject", "points", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["subject", "SirikitV2"], ["points", 12.0], ["created_at", "2022-09-12 15:07:04.299517"], ["updated_at", "2022-09-12 15:07:04.299517"]]
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+Redirected to http://localhost:3000/score/index?sumScore=12&maxScoreSubject=SirikitV2
+Completed 302 Found in 13ms (ActiveRecord: 5.4ms | Allocations: 2537)
+
+
+Started GET "/score/index?sumScore=12&maxScoreSubject=SirikitV2" for 127.0.0.1 at 2022-09-12 22:07:04 +0700
+Processing by ScoreController#index as HTML
+  Parameters: {"sumScore"=>"12", "maxScoreSubject"=>"SirikitV2"}
+  Rendering layout layouts/application.html.erb
+  Rendering score/index.html.erb within layouts/application
+  Rendered score/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 86)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2492)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 2774)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:07:07 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 12.0ms | Allocations: 12596)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 14990)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.4ms | Allocations: 15981)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-12 22:07:08 +0700
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1020)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3437)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 3708)
+
+
+Started GET "/main/test?is_first_time=true&number_of_choices=1" for 127.0.0.1 at 2022-09-12 22:07:10 +0700
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 2521)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 4936)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 5239)
+
+
+Started GET "/main/test?number_of_choices=1&subject_1=Sirikit+V3&mark_1=10" for 127.0.0.1 at 2022-09-12 22:07:19 +0700
+Processing by FormController#index as HTML
+  Parameters: {"number_of_choices"=>"1", "subject_1"=>"Sirikit V3", "mark_1"=>"10"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."subject" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["subject", "Sirikit V3"], ["LIMIT", 1]]
+  ↳ app/controllers/form_controller.rb:34:in `block in index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mStudent Create (0.2ms)[0m  [1m[32mINSERT INTO "students" ("subject", "points", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["subject", "Sirikit V3"], ["points", 10.0], ["created_at", "2022-09-12 15:07:19.919643"], ["updated_at", "2022-09-12 15:07:19.919643"]]
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/form_controller.rb:41:in `block in index'
+Redirected to http://localhost:3000/score/index?sumScore=10&maxScoreSubject=Sirikit V3
+Completed 302 Found in 9ms (ActiveRecord: 1.8ms | Allocations: 2552)
+
+
+Started GET "/score/index?sumScore=10&maxScoreSubject=Sirikit%20V3" for 127.0.0.1 at 2022-09-12 22:07:19 +0700
+Processing by ScoreController#index as HTML
+  Parameters: {"sumScore"=>"10", "maxScoreSubject"=>"Sirikit V3"}
+  Rendering layout layouts/application.html.erb
+  Rendering score/index.html.erb within layouts/application
+  Rendered score/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2487)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 2768)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:07:27 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 6.6ms | Allocations: 15689)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 18098)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.2ms | Allocations: 19101)
+
+
+Started GET "/score/edit?subject_edit=Long+live+the+king&point_edit=9999999999999&id_edit=8&commit=edit" for 127.0.0.1 at 2022-09-12 22:07:34 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_edit"=>"Long live the king", "point_edit"=>"9999999999999", "id_edit"=>"8", "commit"=>"edit"}
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 3.2ms | Allocations: 3492)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 5892)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 6232)
+
+
+Started GET "/score/edit?subject_update=Long+live+the+king&point_update=999999999999900099999&form_edit=true&id_update=8&commit=submit" for 127.0.0.1 at 2022-09-12 22:07:39 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_update"=>"Long live the king", "point_update"=>"999999999999900099999", "form_edit"=>"true", "id_update"=>"8", "commit"=>"submit"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/score_table_controller.rb:40:in `edit'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/score_table_controller.rb:43:in `edit'
+  [1m[36mStudent Update (0.3ms)[0m  [1m[33mUPDATE "students" SET "points" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["points", 9.999999999999001e+20], ["updated_at", "2022-09-12 15:07:39.028066"], ["id", 8]]
+  ↳ app/controllers/score_table_controller.rb:43:in `edit'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/score_table_controller.rb:43:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 1.6ms | Allocations: 3508)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 5917)
+Completed 200 OK in 19ms (Views: 10.3ms | ActiveRecord: 2.8ms | Allocations: 8624)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:07:41 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 8.0ms | Allocations: 15693)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 18099)
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.2ms | Allocations: 19107)
+
+
+Started GET "/score/edit?subject_edit=Long+live+the+king&point_edit=999999999999900123136&id_edit=8&commit=edit" for 127.0.0.1 at 2022-09-12 22:07:48 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_edit"=>"Long live the king", "point_edit"=>"999999999999900123136", "id_edit"=>"8", "commit"=>"edit"}
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 3067)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 5467)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 5755)
+
+
+Started GET "/score/edit?subject_update=Long+live+the+king&point_update=9999999999999999999999&form_edit=true&id_update=8&commit=submit" for 127.0.0.1 at 2022-09-12 22:07:54 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_update"=>"Long live the king", "point_update"=>"9999999999999999999999", "form_edit"=>"true", "id_update"=>"8", "commit"=>"submit"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/score_table_controller.rb:40:in `edit'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/score_table_controller.rb:43:in `edit'
+  [1m[36mStudent Update (0.2ms)[0m  [1m[33mUPDATE "students" SET "points" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["points", 1.0e+22], ["updated_at", "2022-09-12 15:07:54.745005"], ["id", 8]]
+  ↳ app/controllers/score_table_controller.rb:43:in `edit'
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/score_table_controller.rb:43:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3508)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 5920)
+Completed 200 OK in 21ms (Views: 10.1ms | ActiveRecord: 6.3ms | Allocations: 8595)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:07:55 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 12.7ms | Allocations: 15692)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 18101)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.1ms | Allocations: 19110)
+
+
+Started GET "/score/edit?subject_edit=Long+live+the+king&point_edit=10000000000000000000000&id_edit=8&commit=edit" for 127.0.0.1 at 2022-09-12 22:08:01 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_edit"=>"Long live the king", "point_edit"=>"10000000000000000000000", "id_edit"=>"8", "commit"=>"edit"}
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 3067)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 5479)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 5767)
+
+
+Started GET "/score/edit?subject_update=Long+live+the+king&point_update=999&form_edit=true&id_update=8&commit=submit" for 127.0.0.1 at 2022-09-12 22:08:05 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_update"=>"Long live the king", "point_update"=>"999", "form_edit"=>"true", "id_update"=>"8", "commit"=>"submit"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/score_table_controller.rb:40:in `edit'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/score_table_controller.rb:43:in `edit'
+  [1m[36mStudent Update (0.2ms)[0m  [1m[33mUPDATE "students" SET "points" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["points", 999.0], ["updated_at", "2022-09-12 15:08:05.778620"], ["id", 8]]
+  ↳ app/controllers/score_table_controller.rb:43:in `edit'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/score_table_controller.rb:43:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 3508)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 5911)
+Completed 200 OK in 19ms (Views: 10.1ms | ActiveRecord: 3.1ms | Allocations: 8589)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:08:08 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 8.7ms | Allocations: 15689)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 18099)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.2ms | Allocations: 19102)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:14:19 +0700
+Started GET "/" for 127.0.0.1 at 2022-09-12 22:14:19 +0700
+Started GET "/" for 127.0.0.1 at 2022-09-12 22:14:19 +0700
+Started GET "/" for 127.0.0.1 at 2022-09-12 22:14:19 +0700
+Processing by ScoreTableController#list as HTML
+Processing by FormController#home as HTML
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1576)
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 1041)
+  Rendered form/home.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2468)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendered layout layouts/application.html.erb (Duration: 48.5ms | Allocations: 34496)
+Completed 200 OK in 52ms (Views: 51.1ms | Allocations: 35723)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 38.4ms | Allocations: 26420)
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendered layout layouts/application.html.erb (Duration: 55.8ms | Allocations: 40291)
+Completed 200 OK in 64ms (Views: 56.4ms | ActiveRecord: 0.0ms | Allocations: 43284)
+
+
+Completed 200 OK in 70ms (Views: 69.8ms | ActiveRecord: 0.0ms | Allocations: 44601)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 28.6ms | Allocations: 16279)
+  Rendered layout layouts/application.html.erb (Duration: 37.2ms | Allocations: 18851)
+Completed 200 OK in 114ms (Views: 50.6ms | ActiveRecord: 0.6ms | Allocations: 65672)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-12 22:14:25 +0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1853)
+  Rendered layout layouts/application.html.erb (Duration: 148.9ms | Allocations: 36670)
+Completed 200 OK in 164ms (Views: 152.3ms | ActiveRecord: 0.0ms | Allocations: 40107)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:15:02 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 10.8ms | Allocations: 16275)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 18942)
+Completed 200 OK in 36ms (Views: 21.3ms | ActiveRecord: 1.0ms | Allocations: 25800)
+
+
+Started GET "/score/edit?subject_edit=Long+live+the+king&point_edit=999&id_edit=8&commit=edit" for 127.0.0.1 at 2022-09-12 22:15:08 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_edit"=>"Long live the king", "point_edit"=>"999", "id_edit"=>"8", "commit"=>"edit"}
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 4.1ms | Allocations: 3878)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 6457)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 6870)
+
+
+Started GET "/score/edit?subject_update=&point_update=&form_edit=true&id_update=8&commit=submit" for 127.0.0.1 at 2022-09-12 22:15:12 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_update"=>"", "point_update"=>"", "form_edit"=>"true", "id_update"=>"8", "commit"=>"submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 3072)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 5479)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 5819)
+
+
+Started GET "/score/edit?subject_update=&point_update=&form_edit=true&id_update=8&commit=submit" for 127.0.0.1 at 2022-09-12 22:15:16 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_update"=>"", "point_update"=>"", "form_edit"=>"true", "id_update"=>"8", "commit"=>"submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 3065)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 5457)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 5761)
+
+
+Started GET "/score/edit?subject_update=&point_update=&form_edit=true&id_update=8&commit=submit" for 127.0.0.1 at 2022-09-12 22:17:25 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_update"=>"", "point_update"=>"", "form_edit"=>"true", "id_update"=>"8", "commit"=>"submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 3.5ms | Allocations: 3997)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 6840)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 7725)
+
+
+Started GET "/score/edit?subject_update=&point_update=&form_edit=true&id_update=8&commit=submit" for 127.0.0.1 at 2022-09-12 22:18:16 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_update"=>"", "point_update"=>"", "form_edit"=>"true", "id_update"=>"8", "commit"=>"submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 63.1ms | Allocations: 4886)
+  Rendered layout layouts/application.html.erb (Duration: 140.4ms | Allocations: 39245)
+Completed 200 OK in 154ms (Views: 144.1ms | ActiveRecord: 0.0ms | Allocations: 42728)
+
+
+Started GET "/score/edit?subject_update=start&point_update=123&form_edit=true&id_update=8&commit=submit" for 127.0.0.1 at 2022-09-12 22:18:21 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_update"=>"start", "point_update"=>"123", "form_edit"=>"true", "id_update"=>"8", "commit"=>"submit"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/score_table_controller.rb:33:in `edit'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/score_table_controller.rb:36:in `edit'
+  [1m[36mStudent Update (0.3ms)[0m  [1m[33mUPDATE "students" SET "subject" = ?, "points" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["subject", "start"], ["points", 123.0], ["updated_at", "2022-09-12 15:18:21.061929"], ["id", 8]]
+  ↳ app/controllers/score_table_controller.rb:36:in `edit'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/score_table_controller.rb:36:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 3036)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 5619)
+Completed 200 OK in 35ms (Views: 9.8ms | ActiveRecord: 4.4ms | Allocations: 15550)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:18:24 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 13.6ms | Allocations: 16242)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 18646)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.3ms | Allocations: 19940)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:21:22 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 7.7ms | Allocations: 16256)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 30375)
+Completed 200 OK in 40ms (Views: 26.8ms | ActiveRecord: 1.5ms | Allocations: 35127)
+
+
+Started GET "/score/edit?subject_edit=start&point_edit=123&id_edit=8&commit=edit" for 127.0.0.1 at 2022-09-12 22:21:24 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_edit"=>"start", "point_edit"=>"123", "id_edit"=>"8", "commit"=>"edit"}
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 3458)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 5847)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 6214)
+
+
+Started GET "/score/edit?subject_update=start&point_update=123&form_edit=true&id_update=8&commit=submit" for 127.0.0.1 at 2022-09-12 22:21:26 +0700
+Processing by ScoreTableController#edit as HTML
+  Parameters: {"subject_update"=>"start", "point_update"=>"123", "form_edit"=>"true", "id_update"=>"8", "commit"=>"submit"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? ORDER BY "students"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/score_table_controller.rb:34:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/edit.html.erb within layouts/application
+  Rendered score_table/edit.html.erb within layouts/application (Duration: 1.6ms | Allocations: 3502)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 5923)
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 7277)
+
+
+Started GET "/score/list" for 127.0.0.1 at 2022-09-12 22:21:28 +0700
+Processing by ScoreTableController#list as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  ↳ app/controllers/score_table_controller.rb:11:in `list'
+  Rendering layout layouts/application.html.erb
+  Rendering score_table/list.html.erb within layouts/application
+  Rendered score_table/list.html.erb within layouts/application (Duration: 18.6ms | Allocations: 15689)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 18119)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.1ms | Allocations: 19129)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-12 22:21:31 +0700
+Processing by FormController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering form/home.html.erb within layouts/application
+  Rendered form/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1354)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4023)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 4806)
+
+
+Started GET "/main/test?is_first_time=true&number_of_choices=5" for 127.0.0.1 at 2022-09-12 22:21:36 +0700
+Processing by FormController#index as HTML
+  Parameters: {"is_first_time"=>"true", "number_of_choices"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 10284)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 12694)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 13086)
+
+
+Started GET "/main/test?number_of_choices=5&subject_1=&mark_1=&subject_2=&mark_2=&subject_3=&mark_3=&subject_4=&mark_4=&subject_5=&mark_5=" for 127.0.0.1 at 2022-09-12 22:21:38 +0700
+Processing by FormController#index as HTML
+  Parameters: {"number_of_choices"=>"5", "subject_1"=>"", "mark_1"=>"", "subject_2"=>"", "mark_2"=>"", "subject_3"=>"", "mark_3"=>"", "subject_4"=>"", "mark_4"=>"", "subject_5"=>"", "mark_5"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 9889)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 12295)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 12629)
+
+
+Started GET "/main/test?number_of_choices=5&subject_1=&mark_1=&subject_2=&mark_2=&subject_3=&mark_3=&subject_4=&mark_4=&subject_5=&mark_5=" for 127.0.0.1 at 2022-09-12 22:21:57 +0700
+Processing by FormController#index as HTML
+  Parameters: {"number_of_choices"=>"5", "subject_1"=>"", "mark_1"=>"", "subject_2"=>"", "mark_2"=>"", "subject_3"=>"", "mark_3"=>"", "subject_4"=>"", "mark_4"=>"", "subject_5"=>"", "mark_5"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering form/index.html.erb within layouts/application
+  Rendered form/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 10376)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 13208)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 14104)
+
+

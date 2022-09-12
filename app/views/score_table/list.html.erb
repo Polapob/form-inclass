@@ -1,0 +1,54 @@
+<h1>Score#list</h1>
+
+<h1> Show Score Result </h1>
+<br>
+<div>
+    <h2> สรุปค่า Max/Sum ของข้อมูล 'ทั้งหมด' </h2>
+    <h2> Sum of the score: <%= @sumScore %> </h2>
+    <h2> Subject that has max Score: <%= @maxScoreSubject %> </h2>
+    <hr>
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>Subject</th>
+            <th>score</th>
+            <th></th>
+            <th></th>
+        </tr> 
+        <% @data.each_with_index do |element, index| %>
+        <tr>
+                <td> <%= "#{index+1}" %> </td>
+                <td> <%= element[0] %></td>
+                <td> <%= element[1].to_i %></td>
+
+                <td>
+                    <%= form_with url: "/score/edit", method: :get do |form| %>
+                        <%= form.hidden_field :subject_edit, value: element[0] %>
+                        <%= form.hidden_field :point_edit, value: element[1].to_i %>
+                        <%= form.hidden_field :id_edit, value: element[2] %>
+                        <%= form.submit "edit" %>
+                    <% end %>
+                </td>
+                
+                <td>
+                    <%= form_with url: "/score/list", method: :get do |form| %>
+                        <%= form.hidden_field :sumScore, value: @sumScore %>
+                        <%= form.hidden_field :maxScoreSubject, value: @maxScoreSubject %>
+                        <%= form.hidden_field :id_edit, value: element[2] %>
+                        <%= form.submit "delete" %>
+                    <% end %>
+                </td>
+
+             </tr>
+        <% end %>
+    </table>
+
+    <%= button_to "Add new subject", '/', method: :get %>
+
+</div>
+
+<style>
+    table, th, td {
+        border: 1px solid;
+    }
+</style>

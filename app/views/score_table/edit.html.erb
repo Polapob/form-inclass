@@ -1,0 +1,20 @@
+<h1>Edit Each Score data</h1>
+<h2> you can edit the detail, and submit to update your data</h2>
+
+<%= form_with url: "/score/edit", method: :get do |form| %>
+    <%= form.label :subject, "score_name: " %> <%= form.text_field :"subject_update", :value => @subject_edit %>
+    <%= form.label :score, "score: " %> <%= form.number_field :"point_update" , :value => @point_edit %>
+    <%= form.hidden_field :form_edit, value: true %>
+    <%= form.hidden_field :id_update, value: @id_edit %>
+    <% if @isStringEmpty %>
+        <%= form.label "Sub-warin", "You must fill every field before submit" %>
+    <% end %>
+     <% if @isUpdateSuccess %>
+        <%= form.label "Sub-warin", "Successfully update a data" %>
+    <% end %>
+    <br>
+    <%= form.submit "submit" %>
+    <br>
+<% end %>
+<br>
+<%= button_to "Back", '/score/list', method: :get %>

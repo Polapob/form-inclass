@@ -7,10 +7,6 @@
     Number of rows = <%= @number_of_choices %>
     <%= form.hidden_field :number_of_choices, value: @number_of_choices %>
     <% for i in 1..@number_of_choices.to_i  %>
-     <div>
-      row = <%= i %>
-     </div>
-   
     <div>
       <%= form.label :subjecti, "subject_name"  %>
       <%= form.text_field "subject_#{i}",:value => params["subject_#{i}"]%>
